@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    System.out.println("Welcome to the Game");
+	    int randomNum=45;
+	    System.out.println("Enter the number of your choice between 1 to 100");
+	    Scanner sc= new Scanner(System.in);
+	    int a=sc.nextInt();
+	    int u=3;
+	    while(u>0){
+	        u--;
+	        if(a==randomNum){
+	            System.out.println();
+	            System.out.println("Winner");
+	            break;
+	            
+	        }
+	        if(u==0){
+	            System.out.println("Game Over");
+	            break;
+	        }
+	       
+	        if(a>randomNum){
+	            System.out.println("Number is too high, try again, "+u+" attempts left");
+	            System.out.println();
+	            System.out.println("Enter the number again");
+	            a=sc.nextInt();
+	            
+	        }
+	        else if(a<randomNum){
+	            System.out.println("Number is too low, try again, "+u+" attempts left");
+	            System.out.println();
+	        System.out.println("Enter the number again");
+	            a=sc.nextInt();
+	    }
+	  }
+	}
+}
